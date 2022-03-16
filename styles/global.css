@@ -1,0 +1,45 @@
+
+:root {
+    --primary-background: #FFFFF4;
+    --chrome-background: #e3b574;
+    --chrome-background-opaque: #e3b574d1;
+    --secondary-background: #C9B39B;
+    --text-color: #32363F;
+    --accent-light: #ED8F11;
+    --accent-dark: #C27A18;
+    
+    --gutter: 30px;
+}
+
+body {
+    /* style */
+    font-family: 'Titillium Web', sans-serif;
+    background-color: var(--primary-background);
+    color: var(--text-color);
+
+    /* layout */
+    display: grid;
+    grid-template-rows: 80px 1fr auto;
+
+}
+
+
+
+header {
+    display: flex;
+    justify-content: flex-start;
+    background-color: var(--chrome-background);
+    box-shadow: 0px 10px 20px -12px rgba(0,0,0,0.45);
+    padding: 0 var(--gutter);
+}
+
+main {
+    overflow-y: auto;
+}
+
+
+footer {
+    background-color: var(--chrome-background-opaque);
+    padding: 10px var(--gutter);
+    align-self: stretch;
+}
