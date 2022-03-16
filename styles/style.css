@@ -1,90 +1,55 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Hubballi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+/* */
 body {
-    /* feel free to update these css variables for a quick theme */
-
-    --color1: white;
-    --color2: white;
-    --color3: white;
-    --color4: white;
-    --color5: white;
-
-    /* https://coolors.co/generate and click export -> scss to get the colors to copy and paste below*/
-
-    /* --color1: hsla(349, 69%, 76%, 1);
-    --color2: hsla(207, 67%, 44%, 1);
-    --color3: hsla(200, 61%, 56%, 1);
-    --color4: hsla(187, 41%, 94%, 1);
-    --color5: hsla(170, 28%, 95%, 1); */
-
-    /* --color1: hsla(45, 86%, 83%, 1);
-    --color2: hsla(135, 65%, 98%, 1);
-    --color3: hsla(315, 37%, 86%, 1);
-    --color4: hsla(45, 73%, 98%, 1);
-    --color5: hsla(224, 40%, 79%, 1); */
-
-    --header-height: 80px;
-    --shadow: 0px 10px 20px -12px rgba(0, 0, 0, 0.45);
-    --gutter: 30px;
-    --footer-height: 30px;
-
-    font-family: 'Hubballi', cursive;;
-    background-color: var(--color2);
-}
-
-main {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: calc(var(--footer-height));
+    flex-direction: row;
+    background-color: var(--capri);
+    color: var(--darker-blue);
+    font-family: 'Londrina Shadow', sans-serif;
+  }
+
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: rgb(164, 178, 255);
+        color: black;
+    }
 }
 
-section {
-    background-color: var(--color5);
-    max-width: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: var(--gutter);
-    padding-bottom: var(--gutter);
-    margin-top: var(--gutter);
-    margin-bottom: var(--gutter);
-    border: solid 2px var(--color1);
+@media (max-width: 600px) {
+    body {
+        flex-direction: column;
+    }
+    main, header {
+        width: 100vw;
+    }
+    
 }
 
-header {
-    display: flex;
-    justify-content: flex-end;
-    background-color: var(--color3);
-    height: var(--header-height);
-    box-shadow: var(--shadow);
-}
-
-h2 {
-    font-size: 1.8rem;
+  .lighter-text {
+    color: var(--black);
     font-weight: bold;
 }
 
-.gutter-right {
-    margin-right: 20px;
+header {
+    width: 50 vw;
 }
 
-header img {
-    height: var(--header-height);
+main {
+    width: 50vw;
 }
 
-p {
-    margin: var(--gutter);
+  img {
+      height: 100%;
+      max-width: 500px;
+  }
+
+* {
+  --capri: #55B6E9ff;
+  --darker-blue: rgb(9, 85, 151);
+  --orchid-crayola: #E29AD7ff;
+  --aero: #73B3DCff;
+  --cyan-process: #58B1DFff;
+  --cedar-chest: #C46351ff;
+  --black: #000;
 }
 
-footer {
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    display: flex;
-    justify-content: flex-end;
-    background-color: var(--color3);
-    box-shadow: var(--shadow);
-}
